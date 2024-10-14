@@ -1,0 +1,309 @@
+// SMARTPHONE PEQUENO
+@media (max-width: 450px) and (min-width: 320px){
+    $max-width: 420px;
+
+    section{
+        max-width: $max-width;
+    }
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        min-width: 0;
+    }
+
+    // HEADER
+    header{
+        width: 100vw;
+        min-width: 0;
+        overflow-x: hidden;
+
+        img{
+            width: 100%;
+            max-width: 50px;
+        }
+
+        nav{
+            display: none;
+        }
+
+        .containerfixed{
+            width: 100%;
+            max-width: 100vw;
+            justify-content: center;
+        }
+
+        .container{
+            width: 100%;
+            justify-content: center;
+            max-width: $max-width;
+        }
+
+        .container-header{
+            max-width: 100vw;
+        }
+    }
+
+    // BODY
+    // BANNER
+    section .banner{
+        width: 100vw;
+        min-width: 100vw;
+        max-width: 100vw;
+
+        .banner-img{
+            width: 100vw;
+
+            img{
+                width: 100vw;
+            }
+        }
+
+        .banner-text{
+            h1{
+                font-size: 2.5em;
+            }
+
+            p{
+                font-size: 1.5em;
+            }
+
+            .banner-button{
+                font-size: 0.8em;
+
+                a{
+                    margin: 0px 10px;
+                    line-height: 18px;
+                }
+            }
+        }
+    }
+
+    // VALUES
+
+    .section-light{
+        min-height: 850px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        p{
+            max-width: 380px;
+        }
+    }
+    section .values{
+        width: 100vw;
+        max-width: 100vw;
+        min-width: 100vw;
+        flex-direction: column;
+
+        .rotating-border::before, .rotating-border::after{
+            display: none;
+        }
+        
+        .rotating-border{
+            @include container(column, center, flex-start);
+            max-height: 300px;
+
+            @include container(column,center,center);
+            width: 100%;
+            max-width: 100%;
+            max-height: 300px;
+        }
+
+        .values-content{
+            @include container(column,center,center);
+            width: 100%;
+            max-width: 100%;
+            height: 300px;
+            margin: 0;
+        }
+    }
+
+    // WE OFFER
+    section.offer{
+        max-width: 100vw;
+        height: 100%;
+        min-height: 1300px;
+        overflow-x: hidden;
+
+        align-items: center;
+        justify-content: flex-start;
+
+        .we-offer{
+            @include container(column, flex-start, center);
+            height: 100%;
+            margin-top: 60px;
+        }
+
+        .we-offer-text{
+            margin-bottom: 250px
+        }
+
+        .offer-img-container{
+            @include container(column, center, center);
+            max-width: 100vw;
+            min-width: 0;
+
+            .offer-img-content{
+                max-height: 200px;
+            }
+        }
+    }
+
+    // STATUS
+    section.section-status{
+        overflow-x: hidden;
+        width: 100vw;
+        max-width: none;
+        height: 100vh !important;
+        max-height: 500px;
+        min-height: 500px;
+
+        .status-container{
+            flex-direction: column;
+            height: 100%;
+            min-height: 100%;
+            max-height: 200px;
+            width: 100%;
+            min-width: 0;
+            max-width: 100vw;
+            margin: 0;
+        }
+    }
+
+    // PRODUCTS
+    .section-products{
+        max-width: $max-width;
+        overflow-x: hidden;
+
+        .slider{
+            overflow-x: hidden;
+            min-width: 0;
+        }
+    }
+
+    // CONTACT-US
+    .section-contact-us{
+        height: 300px;
+        max-height: 300px;
+        min-height: 450px !important;
+
+        .contact-us-container{
+            width: 100%;
+            min-width: 100px;
+            max-width: 100vw;
+            flex-direction: column;
+
+            .text{
+                flex-direction: column;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                margin: 0;
+                padding: 0;
+                margin-bottom: 50px;
+            }
+        }
+    }
+
+    // PARTNERS
+    .section-partners{
+        width: 100%;
+        height: 100%;
+        min-width: 100px;
+        max-width: 100%;
+        min-height: 250px;
+        max-height: 250px !important;
+        overflow-x: hidden;
+        display: none;
+
+        img{
+            min-width: 150px !important;
+            min-height: none !important;
+            max-height: 150px;
+        }
+
+        @keyframes sliderimg420 {
+            from{
+                left: 2500px;
+            }
+            to{
+                left: -850px;
+            }
+        }
+
+        .partners-container, .partners-container2{
+            min-width: 100px;
+            max-width: 100vw;
+            height: 200px;
+        }
+
+        .partners-container{
+            left: 2500px;
+            animation: sliderimg420 15s linear infinite;
+            animation-delay: 2s;
+        }
+
+        .partners-container2{
+            margin-left: 1500px;
+        }
+    }
+
+    // FOOTER{
+    footer{
+        @include container(column, center, center);
+        width: 100vw;
+        height: 800px;
+        min-height: 850px;
+
+        .footer-container{
+            @include container(column, center, center);
+            width: 100%;
+            max-width: 100%;
+            min-width: 0;
+            height: 100%;
+            min-height: 100%;
+
+            .bar{
+                display: none;
+            }
+        }
+
+        .first-footer{
+            @include container(column, center, center);
+            max-width: 100vw;
+            margin: 0;
+
+            .text{
+                @include container(column, center, center);
+            }
+
+            .hours-container{
+                margin-top: 40px;
+                width: 100%;
+                max-width: 80%;
+            }
+
+            .contactus{
+                @include container(column, center, center);
+                margin: auto;
+                margin-top: 45px;
+                width: 100%;
+                max-width: 80%;
+                text-align: center;
+            }
+        }
+
+        .second-footer{
+            width: 100vw;
+            max-width: 100%;
+
+            .second-footer-content{
+                @include container(column, center, center);
+            }
+        }
+    }
+}

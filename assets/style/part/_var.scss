@@ -1,0 +1,53 @@
+@mixin container($direction, $justify, $align){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+$max-width: 1250px;
+$min-width: 1030px;
+
+
+
+// HEADER
+$main_header_color_text: #000;
+$main_header_bg_color: white;
+
+// /HEADER
+
+// BODY
+$main_banner_color: #F9E400;
+$second_banner_color: white;
+
+$main_banner_color_hover: #f9e400e3;
+
+
+// VALUES
+$bg-color: #e4e4e4;
+$font-color: black;
+
+// WE OFFER
+$main_body_bg_color: #ffffff;
+
+// PRODUCTS
+$main-bg-color: #000;
+$main-paragraph-color: #929292;
+
+// /BODY
+
+// FOOTER
+$footer-font-color: #cacaca;
+$footer-first-bg-color: #2c2c2c;
+$footer-second-bg-color: #181818;
+
+/*
+
+functions
+
+@mixing nome(){}
+
+dentro da class
+@include nome()
+
+*/

@@ -1,0 +1,67 @@
+// VAR
+@import './part/var';
+// /VAR
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #000000;
+    border-radius: 1px;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: $main_banner_color;
+    border-radius: 10px;
+}
+
+.container{
+    width: 100%;
+    max-width: $max-width;
+    @include container(column, center, center);
+}
+
+/* BODY */
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    overflow-x: hidden;
+    background-color: #000; //ASDAIWJDIAWJHDHAWDHJOAUIWHJODAW
+    color: aliceblue;       // APGAR
+    flex-direction: column;
+}
+
+// HEADER
+
+@import './part/header';
+
+// /HEADER
+
+// MAIN BODY
+@import './part/body';
+
+// /MAIN BODY
+// FOOTER
+@import './part/footer.scss';
+
+// /FOOTER
+// /BODY
+
+// RESPONSIVE
+@import './part/responsive.scss';

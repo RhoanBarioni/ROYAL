@@ -1,0 +1,510 @@
+// .container-body{
+//     @include container(column, center, center);
+// }
+
+section{
+    width: 100%;
+}
+
+// BANNER
+.banner{
+    @include container(column, center, center);
+    height: 650px;
+    max-height: 750px;
+    width: 100vw;
+    text-align: center;
+    background-color: #000000bb;
+    z-index: 0;
+    
+    h1{
+        font-size: 3.5em;
+        color: $main_banner_color;
+        font-weight: 600;
+    }
+
+    p{
+        margin: 5px 0px 25px 0px;
+        font-size: 1.2em;
+        color: $second_banner_color;
+    }
+
+    img{
+        pointer-events: none;
+    }
+}
+
+.banner-img{
+    height: inherit;
+    max-height: inherit;
+    width: inherit;
+    background-image: url('../img/banner.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+    position: absolute;
+    max-height: 750px;
+}
+
+.banner-button{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    margin: auto;
+    margin-top: 10px;
+    font-size: 1em;
+
+    a{
+        @include container(row, center, center);
+        width: 100%;
+        max-width: 150px;
+        height: 45px;
+        border: 2px solid white;
+        border-radius: 5px;
+        color: $second_banner_color;
+        font-weight: bolder;
+        text-transform: uppercase;
+        padding: 10px;
+        overflow: hidden;
+    }
+}
+
+.banner-button a:nth-child(2){
+    color: black;
+    background-color: $main_banner_color;
+    border: none;
+}
+
+// HOVER BUTTON
+
+.banner-button a:nth-child(2):hover{
+    background-color: $main_banner_color_hover;
+}
+
+.banner-button a.learn-more-button {
+    position: relative;
+    overflow: hidden;
+    color: $second_banner_color;
+    transition: color 1s ease;
+
+    span{
+        z-index: 1;
+    }
+}
+
+.banner-button a:nth-child(1):hover{
+    border: $main_banner_color;
+    color: $font-color;
+    transition: left 2s ease;
+}
+
+.banner-button a.learn-more-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: $main_banner_color;
+    transition: left 1s ease-in-out;
+    z-index: 0;
+}
+
+.banner-button a.learn-more-button:hover::before {
+    left: 0;
+}
+///BANNER
+
+// VALUES
+.section-light{
+    @include container(row, center, center);
+    width: 100%;
+    background-color: $bg-color;
+    color: $font-color;
+    min-height: 350px;
+}
+
+.values{
+    @include container(row, center, center);
+    width: 80%;
+    height: 280px;
+    max-width: $max-width;
+    min-width: $min-width;
+
+    img{
+        pointer-events: none;
+    }
+}
+
+.values-content{
+    @include container(column, center, center);
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 0px 20px;
+
+    img{
+        max-width: 65px;
+    }
+
+    h3{
+        margin: 10px 0px;
+    }
+
+    p{
+        font-size: 15px;
+    }
+}
+
+.rotating-border{
+    display: flex;
+    flex-direction: row;
+    margin: 0px 20px;
+}
+
+.rotating-border::before, .rotating-border::after{
+    content: '';
+    background-color: #8d8d8d;
+    width: 2px;
+    border-radius: 5px;
+    transform: rotate(5deg);
+}
+
+// /VALUES
+// WE OFFER
+.offer{
+    width: 100vw;
+    min-height: 600px;
+    background-color: $main_body_bg_color;
+
+    h3{
+        text-transform: capitalize;
+    }
+
+    img{
+        pointer-events: none;
+    }
+}
+
+.we-offer{
+    @include container(column, center, center);
+    width: 100%;
+    height: 100%;
+}
+
+.we-offer-text{
+    @include container(column, center, center);
+    width: 100%;
+    max-width: $max-width;
+    margin-bottom: 20px;
+
+    h3{
+        font-size: 35px;
+    }
+}
+
+.border{
+    width: 10%;
+    min-width: 10px;
+    height: 5px;
+    background-color: $main_banner_color;
+    margin: 15px;
+}
+
+.offer-img-container{
+    @include container(row, center, center);
+    max-width: $max-width;
+    margin-bottom: 20px;
+    min-width: $min-width;
+
+    h3{
+        width: 80%;
+        font-size: 1rem;
+        margin: 15px 0px;
+        text-transform: uppercase;
+    }
+
+    p{
+        word-wrap: break-word;
+        width: 80%;
+        max-width: 450px;
+        font-size: 0.9em;
+    }
+
+    img{
+        width: 100%;
+        max-width: 315px;
+        border-radius: 5px;
+    }
+}
+
+.offer-img-content{
+    @include container(column, center, center);
+    width: 100%;
+    max-width: 390px;
+    min-height: 60%
+}
+
+// /WE OFFER
+
+// STATUS
+
+.section-status{
+    @extend .section-light;
+    height: 100%;
+    min-height: 200px;
+    width: 100vw;
+    background-color: black;
+}
+
+.status-container{
+    @include container(row, space-around, center);
+    width: 95%;
+    max-width: 100%;
+    height: 100%;
+    min-width: auto;
+}
+
+.status-content{
+    @include container(column, center, center);
+    text-transform: uppercase;
+    width: 100vw;
+
+    h2, span{
+        color: $main_banner_color;
+    }
+
+    h3{
+        color: white;
+        font-size: 0.9em;
+        margin-top: 5px;
+    }
+
+}
+
+// PRODUCTS
+
+.section-products{
+    position: relative;
+    overflow: hidden;
+    min-height: 500px;
+    background-color: $main_body_bg_color;
+    color: $font-color;
+    width: 100vw;
+
+    img{
+        pointer-events: none;
+    }
+
+    .products-container {
+        @include container(column, center, center);
+        margin: auto;
+        max-width: $max-width;
+        height: 100%;
+
+        h3{
+            text-transform: capitalize;
+        }
+    }
+
+    .slider {
+        width: 85%;
+        max-width: $max-width;
+        min-width: $min-width;
+        overflow: hidden;
+        border-radius: 10px;
+        height: 200px;
+        margin-bottom: 25px;
+    }
+    
+    .slider-img {
+        display: flex;
+        transition: transform 2s ease;
+        margin-bottom: 20px;
+    }
+    
+    .slider-img img {
+        flex: 0 0 calc(33.33% - 30px);
+        margin: 0 15px;
+        border-radius: 5px;
+        max-height: 200px;
+    }
+    
+    .nav{
+        @include container(row, center, center);
+        button{
+            @include container(column, center, center);
+            background-color: $main_banner_color;
+            border: 2px solid black;
+            border-radius: 15px;
+            width: 60px;
+            height: 35px;
+            padding: 2px;
+            text-transform: uppercase;
+            font-weight: bolder;
+            margin: 0px 5px;
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background-color: #f9e400d7;
+            color: black;
+            border: 2px solid black;
+        }
+    }
+}
+
+// CONTACT US
+
+.section-contact-us{
+    @extend .section-light;
+    background-color: $main-bg-color;
+    min-height: 250px;
+    width: 100vw;
+    color: white;
+
+    .contact-us-container{
+        @include container(row, center, center);
+        max-width: $max-width;
+        width: 72%;
+        min-width: $min-width;
+    }
+
+    .text{
+        width: 60%;
+        max-width: 400px;
+        margin-right: 20px;
+
+        h3{
+            color: $main_banner_color;
+            text-transform: capitalize;
+            font-size: 1.5em;
+        }
+
+        p{
+            color: $main-paragraph-color;
+            font-size: 0.9em;
+            width: 90%;
+        }
+        
+    }
+
+    .border{
+        margin: 10px 0px;
+        width: 100%;
+        max-width: 100px;
+        height: 2px;
+    }
+
+    .box{
+        @include container(column, center, center);
+        width: 100px;
+        height: 100px;
+        border-radius: 20%;
+        background-color: rgba(255, 255, 255, 0);
+        position: relative;
+        border-radius: 50%;
+        z-index: 1;
+
+        a{
+            @include container(row, center, center);
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        img{
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            pointer-events: none;
+        }
+    }
+
+    .box::after, .box::before{
+        content: '';
+        display: block;
+        position: absolute;
+        border: 2px solid $main_banner_color;
+        border-radius: 50%;
+        top: -20px;
+        right: -20px;
+        left: -20px;
+        bottom: -20px;
+        animation: pulsing 2.5s linear infinite;
+        opacity: 0;
+    }
+
+    .box::after{
+        animation-delay: 0.8s;
+    }
+
+    @keyframes pulsing {
+        0%{
+            transform: scale(0.5);
+            opacity: 0;
+        }
+
+        50%{
+            opacity: 1;
+        }
+
+        100%{
+            transform: scale(1.2);
+            opacity: 0;
+        }
+    }
+}
+
+// PARTNERS
+@keyframes sliderimg {
+    from{
+        left: 3300px;
+    }
+    to{
+        left: -650px;
+    }
+}
+
+.section-partners{
+    @extend .section-status;
+    background-color: $main_header_bg_color;
+    max-width: 100%;
+    max-height: 150px;
+    min-height: 150px;
+    overflow-x: hidden;
+
+    img{
+        max-width: 150px;
+        max-height: 100px;
+        filter: grayscale(100%);
+        margin: 0px 50px;
+        transition: filter 0.5s ease-in-out;
+    }
+
+    .partners-container{
+        @include container(row, center, center);
+        width: 100%;
+        position: absolute;
+        left: 3300px;
+        animation: sliderimg 25s linear infinite;
+        animation-delay: 0.8s;
+        
+        :hover{
+            filter: grayscale(0%);
+        }
+    }
+
+    .partners-container2{
+        @include container(row, center, center);
+        margin-left: 750px;
+    }
+
+    &:hover .partners-container,
+    &:hover .partners-container2 {
+        animation-play-state: paused;
+    }
+}
+
+// FOOTER
+

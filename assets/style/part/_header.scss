@@ -1,0 +1,88 @@
+/* HEADER */
+
+header{
+    width: 100%;
+    height: 100%;
+    min-height: 100px;
+    max-height: 100px;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $main_header_bg_color;
+    z-index: 2;
+}
+
+.containerfixed{
+    @include container(row, center, center);
+    width: 100vw;
+    height: 100%;
+    max-height: 100px;
+    position: fixed;
+    background-color: $main_header_bg_color;
+    z-index: 2;
+}
+
+.container-header{
+    @include container(row, space-between, center);
+    width: 100%;
+    height: 100%;
+    max-height: 100px;
+    position: fixed;
+    background-color: $main_header_bg_color;
+    z-index: 2;
+}
+
+.container .logo{
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 100%;
+
+    a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $main_header_color_text;
+    }
+}
+
+.container.logo a img{
+    max-width: 250px;
+}
+
+/* /HEADER */
+
+// NAV
+
+nav{
+    width: 100%;
+    max-width: 300px;
+    text-transform: uppercase;
+    font-size: 1.1em;
+    font-weight: 600;
+    justify-content: center;
+    align-items: center;
+
+    ul{
+        display: flex;
+        width: 100% ;
+        text-align: center;
+        justify-content: space-between;
+    }
+
+    li{
+        font-weight: 500;
+    }
+
+    a{
+        color: $main_header_color_text;
+        width: 100%;
+    }
+    
+}
+
+.navbar{
+    width: 100%;
+    flex-direction: row;
+}
