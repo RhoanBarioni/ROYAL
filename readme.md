@@ -4,7 +4,7 @@
 <br>
 
 ### Tecnologias Usadas:
-![HTML, CSS, JS, GIT, GITHUB, SCSS](https://skillicons.dev/icons?i=html,css,js,git,github,scss)
+![HTML, CSS, JS, SCSS, GIT](https://skillicons.dev/icons?i=html,css,scss,js,git)
 
 <br>
 
